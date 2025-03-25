@@ -21,6 +21,7 @@ app.use(express.json());
 //Cookie parser
 app.use(cookieParser());
 
+app.route("/").get((req, res) => (res.status(200).send("running")))
 app.use("/api/v1/branches", branches);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/appointments", appointments);
